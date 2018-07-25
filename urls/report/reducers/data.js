@@ -12,6 +12,8 @@ export default (state = generateData(), action) => {
     case RECEIVE_DATA: {
       return Object.assign({}, action.payload)
     }
+    default: {
+      return state
+    }
   }
-  return state
 }
