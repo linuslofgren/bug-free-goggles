@@ -30,8 +30,9 @@ jobs:
 
       - save_cache:
           paths:
-            - node_modules
+            - ~/Documents/Viscando/React-Webpack-Yarn-Babel-1/bug-free-goggles/node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
+      
 
       # run tests!
       - run: npm test
