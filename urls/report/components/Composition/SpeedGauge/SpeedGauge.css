@@ -1,0 +1,38 @@
+.speedContainerContainer {
+  background-color: #eee;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+  width: 280px;
+}
+.speedContainer {
+  background-color: #eee;
+  width: 250px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  height: 50px;
+}
+.speedPart {
+  display: flex;
+  flex-direction: column;
+  border-left: 1.6px solid rgba(100, 100, 100, 0.7);
+  flex-grow: 1;
+  align-items: center;
+  justify-content: space-around;
+  font-family: 'Lato', sans-serif;
+  color: rgb(110, 110, 110);
+  font-size: 17px;
+}
+.speedPart:first-child {
+  border-left: none;
+}
+.speedTop {
+  font-size: 14px;
+}
+@media print {
+  .speedContainerContainer {
+    background-color: white;
+  }
+}

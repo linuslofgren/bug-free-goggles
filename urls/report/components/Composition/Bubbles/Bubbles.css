@@ -1,0 +1,67 @@
+.bubblesContainer {
+  position: relative;
+  width: 100%;
+  height: 300px;
+}
+.bubbleContainer {
+  position: absolute;
+  bottom: 0;
+  width: 195px;
+  height: 190px;
+  background-color: rgb(0, 105, 188);
+  border-radius: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+}
+.largeTitle {
+  color: white;
+  font-family: 'Lato', sans-serif;
+  font-size: 2em;
+}
+.smallerTitle {
+  color: white;
+  font-family: 'Lato', sans-serif;
+  font-weight: 100;
+  font-size: 1em;
+}
+.smallerTitleNumber {
+  font-weight: 400;
+}
+.topTitle {
+  color: white;
+  font-family: 'Lato', sans-serif;
+  font-weight: 100;
+  font-size: 1.3em;
+  text-align: center;
+  margin-top: -20px;
+}
+.rightBubble {
+  background-color: rgb(255, 118, 0);
+  bottom: 67px;
+  left: 165px;
+  width: 150px;
+  height: 145px;
+  font-size: 11px;
+  padding-top: 10px;
+}
+@media print {
+  .bubblesContainer {
+    height: 400px;
+  }
+  .bubbleContainer {
+    width: 130px;
+    height: 126.666px;
+    font-size: 13px;
+  }
+  .rightBubble {
+    width: 100px;
+    height: 94px;
+    bottom: 67px;
+    left: 107px;
+    font-size: 7px;
+    letter-spacing: 0px;
+  }
+}

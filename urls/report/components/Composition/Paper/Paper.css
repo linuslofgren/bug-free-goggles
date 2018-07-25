@@ -1,0 +1,20 @@
+.paper {
+  width: 297mm;
+  height: 210mm;
+  background-color: white;
+  box-shadow: 0px 0px 33px -10px rgba(0,0,0,0.75);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+@media print {
+  .paper {
+    /* display: inline; */
+    margin: 0cm;
+    display: inline-block;
+    box-shadow: none;
+    padding: 0;
+    height: 180mm;
+    page-break-inside: avoid;
+  }
+}

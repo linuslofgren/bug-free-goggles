@@ -1,0 +1,74 @@
+.controlsContainer {
+  color: #062659;
+  width: 297mm;
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+  border: solid #062659;
+  border-width: 0 0 2px 0;
+  padding-bottom: 30px;
+}
+.controls {
+  display: flex;
+  flex-direction: row;
+  align-self: flex-start;
+  justify-content: flex-end;
+  vertical-align: middle;
+  margin-top: 20px;
+  height: 30px;
+  margin-left: 20px;
+}
+.helpButton {
+  margin-left: 10px;
+  margin-top: 6px;
+}
+.text {
+  font-family: 'Lato', sans-serif;
+  font-size: 20px;
+  margin-top: 4px;
+  margin-right: 7px;
+  /* margin-right: 10px; */
+  /* padding-top: 2px; */
+}
+.middleText {
+  margin-left: 30px;
+  /* margin-right: 6px; */
+}
+.leftText {
+  /* margin-right: 6px; */
+}
+.right {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+}
+.filterControls {
+  display: flex;
+  flex-direction: row;
+  margin-left: 40px;
+}
+.download {
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+  cursor: pointer;
+  border: 2px solid #062659;
+  background-color: #062659;
+  color: white;
+  font-weight: normal;
+  /* color: white; */
+  vertical-align: middle;
+  padding: 10px;
+}
+.download .text {
+  margin: 0;
+}
+@media print {
+  .controlsContainer {
+    display: none;
+    margin: 0;
+  }
+}

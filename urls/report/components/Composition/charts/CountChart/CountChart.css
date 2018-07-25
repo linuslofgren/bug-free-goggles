@@ -1,0 +1,31 @@
+.countContainer {
+  width: 100%;
+  height: 280px;
+  margin-bottom: 20px;
+  position: relative;
+}
+.infoContainer {
+  position: absolute;
+  font-family: 'Lato', sans-serif;
+  font-weight: normal;
+  font-size: 0.8em;
+  color: rgb(122, 122, 122);
+  bottom: 0;
+  right: 0;
+}
+.infoContainer div::before {
+  content: '';
+  margin-right: 5px;
+  display: inline-block;
+  width: 30px;
+  height: 10px;
+}
+.light::before {
+  background-color: rgba(0, 154, 239, 1);
+}
+.medium::before {
+  background-color: rgba(0, 100, 180, 1);
+}
+.dark::before {
+  background-color: rgba(0, 55, 94, 1);
+}

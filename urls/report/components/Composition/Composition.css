@@ -1,0 +1,48 @@
+* {
+  -webkit-print-color-adjust: exact;
+}
+.backgroundPage {
+  background-color: #E3ecf1;
+  padding: 20px;
+  padding-top: 100px;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 20;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.paper {
+  margin: 45px;
+  margin-top: 35px;
+  margin-bottom: 100px;
+}
+.speedGauge {
+  margin-top: 14px;
+}
+@media print {
+  .paper {
+    margin: 0;
+  }
+  .backgroundPage {
+    display: inline;
+    padding: 0;
+    background-color: white;
+  }
+  @page {
+    margin: 0;
+    size: landscape;
+  }
+}

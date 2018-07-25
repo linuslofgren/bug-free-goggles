@@ -1,0 +1,18 @@
+.arrow {
+  width: 75%;
+  height: 4px;
+  background-color: rgb(255, 118, 0);
+  position: relative;
+  margin-top: -27px;
+}
+.arrowHead {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translate(100%, -50%);
+  width: 0;
+  height: 0;
+  border-left: 20px solid rgb(255, 118, 0);
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+}

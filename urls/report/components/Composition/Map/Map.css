@@ -1,0 +1,31 @@
+.mapContainer {
+  width: 250px;
+  height: 250px;
+  margin-left: 20px;
+  overflow: hidden;
+  /* Nicer with 100% border-radius, but becomes skewed when printing */
+  border-radius: 20%;
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid grey;
+  z-index: 10;
+  position: relative;
+}
+.map {
+  position: absolute;
+  height: 300px;
+  width: 300px;
+  z-index: -100;
+  margin-left: -10px;
+  /* display: none; */
+  filter: grayscale(1);
+  /* transform: rotate(209deg); */
+  /* background-color: red; */
+}
+@media print {
+  .image {
+    image-rendering: pixelated;
+  }
+}

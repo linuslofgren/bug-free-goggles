@@ -1,0 +1,12 @@
+.logo {
+  max-height: 70px;
+  position: absolute;
+  right: 20px;
+  top: 40px;
+}
+@media print {
+  .logo {
+    right: 0;
+    top: 0;
+  }
+}

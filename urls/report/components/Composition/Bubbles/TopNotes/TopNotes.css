@@ -1,0 +1,48 @@
+.topNotesContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.topNoteList {
+  display: flex;
+  flex-direction: row;
+  color: white;
+  font-family: 'Lato', sans-serif;
+  font-weight: 200;
+  font-size: 1.2em;
+  letter-spacing: 1px;
+}
+.topNotesTitle {
+  color: white;
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  font-size: 1.4em;
+  margin-top: -5px;
+  letter-spacing: 2px;
+}
+.topNotesLeft, .topNotesRight {
+  padding: 10px;
+}
+.topNotesLeft {
+  border-right: 1.4px solid rgba(255, 255, 255, 0.8);
+  text-align: right;
+}
+.topNotesRight {
+
+}
+.topNotesListIcon {
+  font-size: 1.5em;
+  text-align: center;
+  margin-top: -7px;
+  margin-bottom: 3px;
+}
+@media print {
+  .topNotesTitle {
+    letter-spacing: 1px;
+  }
+  .topNoteList {
+    font-size: 1.2em;
+    font-weight: normal;
+  }
+}
