@@ -37,6 +37,6 @@ jobs:
       - run: npm test
 
       - run:
-        name: Deploy over SSH
-        command: |
-          echo $SSH_HOST && exit 0
+          name: Deploy over SSH
+          command: |
+            echo $SSH_HOST && exit 0
