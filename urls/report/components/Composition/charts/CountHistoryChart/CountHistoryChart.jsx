@@ -8,7 +8,7 @@ export default class CountHistoryChart extends React.Component {
     super(props)
     this.chartRef = React.createRef()
     this.chartOptions = {
-      type: 'NegativeTransparentLine',
+      type: 'line',
       data: {
         labels: ['Jan', 'Feb', 'Mar', 'Apr', 'Maj', 'Jun', 'Jul', 'Aug', 'Sep', 'Okt', 'Nov', 'Dec'],
         datasets: [{
@@ -17,7 +17,7 @@ export default class CountHistoryChart extends React.Component {
           data: this.props.data,
           borderColor: 'rgba(0, 104, 189, 1)',
           borderWidth: 5,
-          backgroundColor: 'rgba(255, 118, 0, 1)',
+          pointBackgroundColor: 'rgba(255, 118, 0, 1)',
           pointBorderColor: 'rgba(255, 118, 0, 1)',
           pointRadius: 4,
           pointBorderWidth: 0,
