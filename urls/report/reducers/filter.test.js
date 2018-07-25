@@ -37,7 +37,7 @@ describe('Filter reducer', () => {
     })
   })
   describe('when receiving an unknown type', () => {
-    it('returns the original state', () => {
+    it('returns the state', () => {
       let state = {shouldBeTheSame: '16dhg91h'}
       state = filter(state, {type: '___UNKNOWN_TYPE', payload: 'jf91gal'})
       expect(state).toEqual({shouldBeTheSame: '16dhg91h'})
