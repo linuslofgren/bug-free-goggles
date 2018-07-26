@@ -36,6 +36,21 @@ describe('Filter reducer', () => {
       expect(filter(state, {type: 'REMOVE_TYPE', payload: 'car'}).types).toEqual(['ped'])
     })
   })
+  describe('when receiving REQUEST_DATA', () => {
+    it('sets fetching to true', () => {
+      let state = {fetching: false}
+      state = filter(state, {type: 'REQUEST_DATA'})
+      expect(state.fetching).toBe(true)
+    })
+  })
+  describe('when receiving RECEIVE_DATA', () => {
+    it('sets fetching to false again', () => {
+      let state = {fetching: false}
+      state = filter(state, {type: 'REQUEST_DATA'})
+      state = filter(state, {type: 'RECEIVE_DATA'})
+      expect(state.fetching).toBe(false)
+    })
+  })
   describe('when receiving an unknown type', () => {
     it('returns the state', () => {
       let state = {shouldBeTheSame: '16dhg91h'}
