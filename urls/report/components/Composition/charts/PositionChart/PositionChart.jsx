@@ -48,6 +48,7 @@ export default class PositionChart extends React.Component {
             }
           }],
           xAxes: [{
+            barPercentage: 0.6,
             gridLines: {
               display: false
             },
@@ -67,7 +68,12 @@ export default class PositionChart extends React.Component {
     this.chartOptions.data.datasets[0].data = this.props.data
     return (
       <div className={styles.positionContainer}>
-        <BaseChart gradient={['rgba(0, 154, 239, 1)', 'rgba(0, 100, 180, 1)']} chartOptions={this.chartOptions}>Fördelning av besökare över gatan</BaseChart>
+        <BaseChart gradient={(ctx, _, height) => {
+          const g = ctx.createLinearGradient(0, 0, 0, height)
+          g.addColorStop(0, 'rgba(0, 154, 239, 1)')
+          g.addColorStop(1, 'rgba(0, 100, 180, 1)')
+          return g
+        }} chartOptions={this.chartOptions}>Fördelning av besökare över gatan</BaseChart>
         <Arrow right />
       </div>
     )

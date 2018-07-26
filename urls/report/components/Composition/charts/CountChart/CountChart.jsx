@@ -8,7 +8,7 @@ class CountChart extends React.Component {
   constructor (props) {
     super(props)
     this.chartOptions = {
-      type: 'horizontalBar',
+      type: 'roundedHorizontalBar',
       data: {
         labels: ['Gång', 'Cykel', 'Bil'],
         datasets: [{
@@ -29,6 +29,7 @@ class CountChart extends React.Component {
         ]
       },
       options: {
+        barRoundness: 1,
         legend: {
           display: false
         },
@@ -36,6 +37,8 @@ class CountChart extends React.Component {
         maintainAspectRatio: false,
         scales: {
           yAxes: [{
+            barPercentage: 0.7,
+            categoryPercentage: 0.6,
             gridLines: {
               display: false
             }
@@ -51,6 +54,32 @@ class CountChart extends React.Component {
         }
       }
     }
+  }
+  gradient (ctx, width, height, i) {
+    const g = ctx.createLinearGradient(0, 0, width, 0)
+    switch (i) {
+      case 0: {
+        g.addColorStop(1, 'rgba(0, 154, 239, 1)')
+        g.addColorStop(0, 'rgba(0, 154, 239, 1)')
+        break
+      }
+      case 1: {
+        g.addColorStop(1, 'rgba(0, 154, 239, 1)')
+        g.addColorStop(0, 'rgba(0, 100, 180, 1)')
+        break
+      }
+      case 2: {
+        g.addColorStop(1, 'rgba(0, 154, 239, 1)')
+        g.addColorStop(0, 'rgba(0, 55, 94, 1)')
+        break
+      }
+      default: {
+        g.addColorStop(1, 'rgba(0, 154, 239, 1)')
+        g.addColorStop(0, 'rgba(0, 55, 94, 1)')
+        break
+      }
+    }
+    return g
   }
   render () {
     const types = this.props.types
@@ -80,7 +109,7 @@ class CountChart extends React.Component {
     return (
       <div>
         <div className={styles.countContainer}>
-          <BaseChart chartOptions={this.chartOptions}>Antal fotgängare, cyklister och bilar som har passerat.</BaseChart>
+          <BaseChart gradient={this.gradient} chartOptions={this.chartOptions}>Antal fotgängare, cyklister och bilar som har passerat.</BaseChart>
           <div className={styles.infoContainer}>
             <div className={[styles.info, styles.light].join(' ')}>{this.props.month}</div>
             <div className={[styles.info, styles.medium].join(' ')}>Månaden innan</div>

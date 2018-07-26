@@ -32,7 +32,7 @@ class Composition extends React.Component {
         { this.props.fetching ? (<div className={styles.overlay}><HelpDialog /></div>) : null}
         <Controls />
         <Paper className={styles.paper}>
-          <Customer src={'https://upload.wikimedia.org/wikipedia/commons/0/08/Kung%C3%A4lv_kommunvapen_-_Riksarkivet_Sverige.png'} />
+          <Customer src={'http://www.kungalv.se/siteassets/bilder/kommun-och-politik/loggor/stora/sv_hoger_jpg.jpg'} />
           <HeaderContainer />
           <Divider>
             <Column>
