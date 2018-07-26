@@ -3,10 +3,6 @@
 # Check https://circleci.com/docs/2.0/language-javascript/ for more details
 #
 version: 2
-general:
-  branches:
-    only:
-      - master
 jobs:
   build:
     docker:
@@ -42,6 +38,9 @@ jobs:
       - run: npm test
 
       - run:
+          branches:
+            only:
+              - master
           name: Deploy over SSH
           command: |
             echo $SSH_HOST && exit 0
