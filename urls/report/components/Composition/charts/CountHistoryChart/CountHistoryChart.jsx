@@ -81,10 +81,10 @@ export default class CountHistoryChart extends React.Component {
     this.chartOptions.data.datasets[0].data = this.props.data
     return (
       <div className={styles.historyContainer}>
-        <BaseChart gradient={(ctx, width) => {
-          const g = ctx.createLinearGradient(0, 0, width, 0)
-          g.addColorStop(0, 'rgba(235, 150, 60, 1)')
-          g.addColorStop(1, 'rgba(255, 118, 0, 1)')
+        <BaseChart gradient={(ctx, width, height) => {
+          const g = ctx.createLinearGradient(0, 0, 0, height)
+          g.addColorStop(0, 'rgba(50, 164, 239, 1)')
+          g.addColorStop(1, 'rgba(0, 104, 189, 1)')
           return g
         }} chartOptions={this.chartOptions}>Antal besökare i år jämfört med förra året</BaseChart>
       </div>

@@ -11,6 +11,9 @@ import {
 } from './actionTypes'
 
 import data from './mock_data'
+import {getReportData, siteTree} from './api'
+import transformData from './transformData'
+// import fetch from 'cross-fetch'
 
 const setPlace = (text) => ({ type: SET_PLACE, payload: text })
 const setMonth = (text) => ({ type: SET_MONTH, payload: text })
@@ -23,7 +26,10 @@ const requestData = () => ({ type: REQUEST_DATA })
 const receiveData = (data) => ({ type: RECEIVE_DATA, payload: data })
 const fetchData = () => (dispatch) => {
   dispatch(requestData())
-  setTimeout(() => { dispatch(receiveData(data)) }, 300)
+  setTimeout(() => {
+    Promise.resolve(getReportData).then(JSON.parse).catch((e) => console.log(e))
+      .then(transformData(2018, 1)).then((d) => { console.log(d); dispatch(receiveData(d)) })
+  }, 1000)
 }
 
 export {setPlace, setMonth, setComment, setType, removeType, mapLoaded, openHelp, fetchData}

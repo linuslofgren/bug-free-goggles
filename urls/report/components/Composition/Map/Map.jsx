@@ -30,7 +30,7 @@ class Map extends React.Component {
     return (<div className={styles.mapContainer}>
       <Arrow />
       <Compass heading={this.rotation} />
-      <div className={styles.map} ref={this.mapRef}><img className={styles.image} src='http://0.0.0.0:8000/urls/report/staticmap.png' /></div>
+      <div className={styles.map} ref={this.mapRef}><img className={styles.image} src='http://0.0.0.0:8008/urls/report/staticmap.png' /></div>
     </div>)
   }
 }
